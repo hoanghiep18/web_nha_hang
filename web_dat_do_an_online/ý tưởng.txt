@@ -1,0 +1,9 @@
+*ý tưởng--web đặt đồ ăn online
+-tạo trang web giúp kh lựa chọn món mình muốn ăn
+-kh có thể tìm kiếm qua thanh search hoặc vào trang sản phẩm
+    +kh có thể tìm món thông qua thanh search hoặc danh mục có sẵn
+    +khi ấn chọn vào sp sẽ hiện qua trang chi tiết, xem được các ảnh chi tiết.
+    +ấn thêm vào giỏ hàng để có thể tiếp tục chọn món hoặc có thể đặt trực tiêp.
+    +nếu ấn đặt hàng ngay thì sẽ qua trang thanh toán-> tiến hành nhập thông tin giao hàng vào form để gửi data lên database và xác nhận đặt hangf thành công.
+
+    + chức năng khác: đổi điểm thưởng, vourcher khi kh đặt hàng đến số đơn qui định sẽ được xét thưởng.

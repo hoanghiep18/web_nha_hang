@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- boostrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive/main_respon.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious.com/Trang chủ</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="bg-gradient"></div>
+            <div class="header-top">
+                <nav class="menu">
+                    <a href="index.html">Trang chủ</a>
+                    <a href="./products/">Đặt món ngay</a>
+                    <a href="#">Covid-19</a>
+                </nav>
+                <div class="login" data-toggle="modal" data-target="#LoginModal">
+                    <a href="#">
+                        <button>Đăng nhập</button>
+                    </a>
+                </div>
+                <!-- pops up login -->
+                <div class="shopping">
+                    <a href="#" id="shopping"> <i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <!-- end header-top -->
+            <div class="modal fade " role="dialog" id="LoginModal" style="z-index: 100;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" style="border:none;padding-bottom:0;">
+                            <button type="button" class="close" data-dismiss="modal"
+                                style="outline:none;">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                            <h1 class="text-center logo-txt">delicious.com</h1>
+                            <h4 class="text-center">
+                                <dt>Đăng nhập</dt>
+                            </h4>
+                            <div class="sign-up text-center m-3 text-secondary">
+                                <span>Bạn chưa có tài khoản?</span>
+                                <a href="#sign_up" data-toggle="modal" data-target="#RegiserModal"
+                                    id="register-now">Đăng kí mới</a>
+                            </div>
+                            <form action="#login.php" method="POST" name="form-login">
+                                <div class="form-group">
+                                    <input type="text" name="username" placeholder="Nhập username" class="form-control"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" placeholder="Nhập mật khẩu"
+                                        class="form-control">
+                                </div>
+                                <button type="submit" class="col-md-12 btn btn-primary" id="btn-login">Đăng
+                                    nhập</button>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer" style="display:block;">
+                            <div class="forgot_pass_remember col-md-12">
+                                <div class="form-check-inline">
+                                    <label for="" class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="remember_me">Nhớ thông
+                                        tin
+                                    </label>
+                                </div>
+                                <a href="#remember">Quên mật khẩu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal login-->
+            <div class="modal fade" role="dialog" id="RegiserModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" style="border:none;padding-bottom:0;">
+                            <button type="button" class="close" data-dismiss="modal"
+                                style="outline:none;">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 class="text-center logo-txt">delicious.com</h1>
+                            <h4 class="text-center">
+                                <dt>Đăng kí</dt>
+                            </h4>
+                            <div class="sign-up text-center m-3 text-secondary">
+                                <span>Bạn có tài khoản rồi.</span>
+                                <a href="#sign_up" data-toggle="modal" data-target="#LoginModal" id="login-now">Đăng
+                                    nhập ngay</a>
+                            </div>
+                            <form action="#register.php" method="POST" name="form-register">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Tên họ" name="fist_name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Tên" name="last_name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="email" placeholder="Nhập email" class="form-control"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" placeholder="Nhập mật khẩu"
+                                        class="form-control">
+                                </div>
+                                <button type="submit" class="col-md-12 btn btn-primary">Đăng
+                                    kí</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="col-md-12 btn btn-primary" name="login-gg">Tiếp tục với
+                                google</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal register -->
+            <div class="nav-bars" id="toggle"> </div>
+            <!-- end header-top -->
+            <div class="banner-panel">
+                <h1 class="animate__animated animate__tada animate__delay-2s">delicious.com</h1>
+                <div class="all-icon-panel">
+                    <nav class="menu-panel">
+                        <a href="#">
+                            <div class="icon-panel">
+                                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="icon-panel">
+                                <i class="fa fa-glass" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="icon-panel">
+                                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </nav>
+                    <div class="show-content"></div>
+                </div>
+                <div>
+                    <form action="#" method="GET" class="search" style="display: flex;justify-content: center;">
+                        <div class="inpt">
+                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                            <input type="search" placeholder="Tìm món ăn, đồ uống..." required>
+                        </div>
+                        <button type="submit" name="keyword">Tìm kiếm</button>
+                    </form>
+                </div>
+
+            </div>
+        </header>
+        <!-- end header -->
+
+        <main>
+            <div class=" why-order bg-white ">
+                <div class="container-small">
+                    <div class="title-why-order pt-5 pb-5">
+                        <h5 class="text-center font-size-20">Tại sao lại chọn delicious.com</h5>
+                        <div class="under-line mt-3"></div>
+                    </div>
+                    <div class="row content-why text-center pb-5">
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                            <img class="animate__animated animate__bounce animate__delay-2s"
+                                src="images/homepage/https___s3.amazonaws.com_s3.delivery.com_Homepage_WhyOrder_bottle.png"
+                                alt="">
+                            <div class="bongdo mb-5"></div>
+                            <h6>
+                                <dl>Tìm món ăn Yêu thích và Khám phá Thứ mới</dl>
+                            </h6>
+                            <p>Duyệt qua hàng nghìn nhà hàng và cửa hàng để nhận được những điều tốt nhất về khu vực lân
+                                cận
+                                của
+                                bạn.</p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                            <img src="images/homepage/https___s3.amazonaws.com_s3.delivery.com_Homepage_WhyOrder_phone.png"
+                                alt="" class="animate__animated animate__bounce animate__delay-2s">
+                            <div class="bongdo mb-5"></div>
+                            <h6>
+                                <dl>Tìm món ăn Yêu thích và Khám phá Thứ mới</dl>
+                            </h6>
+                            <p>Duyệt qua hàng nghìn nhà hàng và cửa hàng để nhận được những điều tốt nhất về khu vực lân
+                                cận
+                                của
+                                bạn.</p>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                            <img src="images/homepage/https___s3.amazonaws.com_s3.delivery.com_Homepage_WhyOrder_trophy.png"
+                                alt="" class="animate__animated animate__bounce animate__delay-2s">
+                            <div class="bongdo mb-5"></div>
+                            <h6>
+                                <dl>Tìm món ăn Yêu thích và Khám phá Thứ mới</dl>
+                            </h6>
+                            <p>Duyệt qua hàng nghìn nhà hàng và cửa hàng để nhận được những điều tốt nhất về khu vực lân
+                                cận
+                                của
+                                bạn.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end why order -->
+            <div class="about-us">
+                <div class="bg-white container-small about-us-wrapper">
+                    <div class="title-why-order pt-5 pb-5">
+                        <h5 class="text-center font-size-20">Mọi người nói gì về chúng tôi</h5>
+                        <div class="under-line mt-3 "></div>
+                    </div>
+                    <div class="row content-about-us">
+                        <div class="col-12 col-sm-12 col-md-6 mb-3 mt-3">
+                            <div class="mb-3 about-us-item">
+                                <img src="images/homepage/https___s3.amazonaws.com_s3.delivery.com_Homepage_WhatPeopleSay_7_testimonial.jpg"
+                                    alt="" class="rounded pr-3">
+                                <p class="rounded ">Tôi rất thích thú bởi dịch vụ khách hàng xuất sắc 🍕 cảm ơn
+                                    @deliverydotcom vì sự tuyệt vời!
+                                    Katherine</p>
+                            </div>
+                            <div class="mb-3 about-us-item" style="margin-left:80px;">
+                                <img src="images/homepage/feedback2.jpg" alt="" class="rounded pr-3">
+                                <p class="rounded ">Tôi rất thích thú bởi dịch vụ khách hàng xuất sắc 🍕 cảm ơn
+                                    @deliverydotcom vì sự tuyệt vời!
+                                    Katherine</p>
+                            </div>
+                            <div class="mb-3 about-us-item">
+                                <img src="images/homepage/https___s3.amazonaws.com_s3.delivery.com_Homepage_WhatPeopleSay_7_testimonial.jpg"
+                                    alt="" class="rounded pr-3">
+                                <p class="rounded ">Tôi rất thích thú bởi dịch vụ khách hàng xuất sắc 🍕 cảm ơn
+                                    @deliverydotcom vì sự tuyệt vời!
+                                    Katherine</p>
+                            </div>
+
+
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 mb-3 mt-3">
+                            <div class="mb-3 about-us-item">
+                                <p class="rounded ">Tôi rất thích thú bởi dịch vụ khách hàng xuất sắc 🍕 cảm ơn
+                                    @deliverydotcom vì sự tuyệt vời!
+                                    Katherine</p>
+                                <img src="images/homepage/feedback4.jpg" alt="" class="rounded" width="101">
+                            </div>
+                            <div class="mb-3 about-us-item " style="margin-right:80px;">
+                                <p class="rounded ">Tôi rất thích thú bởi dịch vụ khách hàng xuất sắc 🍕 cảm ơn
+                                    @deliverydotcom vì sự tuyệt vời!
+                                    Katherine</p>
+                                <img src="images/homepage/https___s3.amazonaws.com_s3.delivery.com_Homepage_WhatPeopleSay_7_testimonial.jpg"
+                                    alt="" class="rounded">
+                            </div>
+                            <div class="mb-3 about-us-item">
+                                <p class="rounded ">Tôi rất thích thú bởi dịch vụ khách hàng xuất sắc 🍕 cảm ơn
+                                    @deliverydotcom vì sự tuyệt vời!
+                                    Katherine</p>
+                                <img src="images/homepage/feedbackl.jpg" alt="" class="rounded">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end about us -->
+            <div class="news">
+                <div class="container-small">
+                    <div class="title-why-order pt-5 pb-5">
+                        <h5 class="text-center font-size-20">Làm sao để hiểu khách hàng?</h5>
+                        <div class="under-line mt-3"></div>
+                    </div>
+                    <div class="row news-content bg-white mb-4" style="display: flex;align-items: center;">
+                        <div class="col-md-6 pl-0" style="height:300px;overflow:hidden;">
+                            <div class="news-panel-thumb">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Đối với doanh nghiệp địa phương</h6>
+                            <p style="width:70%;">Tìm hiểu cách bắt đầu phát triển doanh nghiệp của bạn với đặt hàng
+                                trực tuyến.</p>
+                            <button class="btn btn-outline-info">Khám phá</button>
+                        </div>
+                    </div>
+                    <div class="new-content-double">
+                        <div class="row bg-white mb-4">
+                            <div class="col-md-6">
+                                <h6>Đối với doanh nghiệp địa phương</h6>
+                                <p style="width:70%;">Tìm hiểu cách bắt đầu phát triển doanh nghiệp của bạn với đặt hàng
+                                    trực tuyến.</p>
+                                <button class="btn btn-outline-info">Khám phá</button>
+                            </div>
+                            <div class="col-md-6 pl-0 thumb_img"
+                                style="background-image: url('./images/homepage/blogs.jpg'); background-size: cover;">
+                            </div>
+                        </div>
+                        <div class="row bg-white mb-4">
+                            <div class="col-md-6">
+                                <h6>Đối với doanh nghiệp địa phương</h6>
+                                <p style="width:70%;">Tìm hiểu cách bắt đầu phát triển doanh nghiệp của bạn với đặt hàng
+                                    trực tuyến.</p>
+                                <button class="btn btn-outline-info">Khám phá</button>
+                            </div>
+                            <div class="col-md-6 pl-0 thumb_img"
+                                style="background-image: url('./images/homepage/blog2.jpg'); background-size: cover;">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end news -->
+    </div>
+    <!--  -->
+    <div class="back-to-top" title="Lên đầu trang"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+    </main>
+    <!-- end main -->
+    <footer class="text-light">
+        <div class="container pt-2 pb-5">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                    <h4>
+                        <dl>Về chúng tôi</dl>
+                    </h4>
+                    <br>
+                    <div class="mb-3 text-col-footer">Xa xa, đằng sau những ngọn núi chữ, xa những quốc gia Vokalia
+                        và Consonantia, có những văn tự mù mịt.</div>
+                    <ul style="display: flex;" class="parent-icon-footer">
+                        <a href="https://www.facebook.com/">
+                            <li class="icon-footer">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="icon-footer">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="icon-footer"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                    <h4>
+                        <dl>Giờ mở cửa</dl>
+                    </h4>
+                    <br>
+                    <div class="row text-col-footer">
+                        <div class="col-md-6">
+                            <li>Thứ hai</li>
+                            <li>Thứ ba</li>
+                            <li>Thứ tư</li>
+                            <li>Thứ năm</li>
+                            <li>Thứ sáu</li>
+                            <li>Thứ bảy</li>
+                            <li>Chủ nhật</li>
+
+                        </div>
+                        <div class="col-md-6">
+                            <li> 9:00 - 24:00</li>
+                            <li> 9:00 - 24:00</li>
+                            <li> 9:00 - 24:00</li>
+                            <li> 9:00 - 24:00</li>
+                            <li> 9:00 - 24:00</li>
+                            <li> 9:00 - 24:00</li>
+                            <li> 9:00 - 24:00</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                    <h4>Địa chỉ</h4><br>
+                    <div class="footer-map mt-3">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8638558813827!2d105.74459841402839!3d21.038132792836187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYw!5e0!3m2!1svi!2s!4v1628739738820!5m2!1svi!2s"
+                            style="width: 100%;height: 160px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                    <h4>
+                        <dl>Kết nối</dl>
+                    </h4>
+                    <br>
+                    <span>Tải về:</span>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#"><img src="images/applestore_hover.png" alt="" width="100px" height="38px"></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#"><img src="images/googleplay_hover.png" alt="" width="100px"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="row">
+                <div class=" coppy-right col-md-12 text-center mt-5 mb-5">
+                    Bản quyền © 2021 Bảo lưu mọi quyền | coppyright Hoang Hiep
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- js -->
+    <!-- jquery bt -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <script type="text/javascript" src="js/modal_login.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

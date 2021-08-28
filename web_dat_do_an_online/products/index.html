@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- boostrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="../css/products.css">
+    <!-- js -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious/Đặt món</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-top" id="header-top">
+                <div class="logo">
+                    <h1> <a href="../index.html" style="text-decoration: none;">delicious.com</a></h1>
+                </div>
+                <div class="header-search">
+                    <form action="#search" method="GET">
+                        <div class="search">
+                            <input type="search" placeholder="Bạn có đang đói?" name="" id="" required>
+                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <!-- end header search -->
+                <div class="header-login-shopping">
+                    <div class="login" data-toggle="modal" data-target="#LoginModal">
+                        <a href="#">
+                            <button>Đăng nhập</button>
+                        </a>
+                    </div>
+                    <!-- end gift -->
+                    <div class="gift">
+                        <a href="#gift"><i class="fa fa-tag" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- èn form login -->
+                    <div class="shopping">
+                        <a href="#" id="shopping"> <i class="fa fa-shopping-bag" aria-hidden="true"></i><span
+                                class="shopping-txt"></span></a>
+                    </div>
+                    <!-- end cart -->
+                    <div class="languages">
+                        <!-- <div class="img">
+                            <img src="" alt="">
+                        </div> -->
+                        <select name="languages" id="" ">
+                            <option value=" #vie">Vietnamese</option>
+                            <option value="#vie">English</option>
+                        </select>
+                    </div>
+                    <!-- end languages -->
+                </div>
+            </div>
+            <div class="modal fade " role="dialog" id="LoginModal" style="z-index: 100;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" style="border:none;padding-bottom:0;">
+                            <button type="button" class="close" data-dismiss="modal"
+                                style="outline:none;">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                            <h1 class="text-center logo-txt">delicious.com</h1>
+                            <h4 class="text-center">
+                                <dt>Đăng nhập</dt>
+                            </h4>
+                            <div class="sign-up text-center m-3 text-secondary">
+                                <span>Bạn chưa có tài khoản?</span>
+                                <a href="#sign_up" data-toggle="modal" data-target="#RegiserModal"
+                                    id="register-now">Đăng kí mới</a>
+                            </div>
+                            <form action="#login.php" method="POST" name="form-login">
+                                <div class="form-group">
+                                    <input type="text" name="username" placeholder="Nhập username" class="form-control"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" placeholder="Nhập mật khẩu"
+                                        class="form-control">
+                                </div>
+                                <button type="submit" class="col-md-12 btn btn-primary" id="btn-login">Đăng
+                                    nhập</button>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer" style="display:block;">
+                            <div class="forgot_pass_remember col-md-12">
+                                <div class="form-check-inline">
+                                    <label for="" class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="remember_me">Nhớ thông
+                                        tin
+                                    </label>
+                                </div>
+                                <a href="#remember">Quên mật khẩu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal login-->
+            <div class="modal fade" role="dialog" id="RegiserModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" style="border:none;padding-bottom:0;">
+                            <button type="button" class="close" data-dismiss="modal"
+                                style="outline:none;">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 class="text-center logo-txt">delicious.com</h1>
+                            <h4 class="text-center">
+                                <dt>Đăng kí</dt>
+                            </h4>
+                            <div class="sign-up text-center m-3 text-secondary">
+                                <span>Bạn có tài khoản rồi.</span>
+                                <a href="#sign_up" data-toggle="modal" data-target="#LoginModal" id="login-now">Đăng
+                                    nhập ngay</a>
+                            </div>
+                            <form action="#register.php" method="POST" name="form-register">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Tên họ" name="fist_name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Tên" name="last_name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="email" placeholder="Nhập email" class="form-control"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" placeholder="Nhập mật khẩu"
+                                        class="form-control">
+                                </div>
+                                <button type="submit" class="col-md-12 btn btn-primary">Đăng
+                                    kí</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+
+                            <button type="button" class="col-md-12 btn btn-primary" name="login-gg">Tiếp tục với
+                                google</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal register -->
+            <!-- end header-top -->
+            <div class="header-bottom">
+                <div class="header-menu">
+                    <ul class="">
+                        <li><a href="../index.html"><i class="fa fa-home" aria-hidden="true"></i>Trang chủ</a></li>
+                        <li><a href="index.html" class="text-info"> <i class="fa fa-cutlery" aria-hidden="true"></i>Món ăn</a></li>
+                        <li><a href="#"><i class="fa fa-glass" aria-hidden="true"></i>Đồ uống</a></li>
+                        <li><a href="#"><i class="fa fa-gift" aria-hidden="true"></i>Quà tặng</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                    <!-- modal chat -->
+                    <div class="modal fade" role="dialog" id="ChatModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header" style="border:none;padding-bottom:0;">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                        style="outline:none;">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1 class="text-center logo-txt">delicious.com</h1>
+                                    <h4 class="text-center">
+                                        <dt>Chat</dt>
+                                    </h4>
+
+
+                                </div>
+                                <div class="modal-footer">
+
+                                    <button type="button" class="col-md-12 btn btn-primary" name="login-gg">Tiếp tục với
+                                        google</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end modal chat -->
+                </div>
+                <div class="header-chat" data-toggle="modal" data-target="#ChatModal">
+                    <a href="#chat"><i class="fa fa-commenting" aria-hidden="true"></i>Chat</a>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <main>
+            
+            <div class="container">
+                <div class="category-food mt-5 mb-4">
+                    <div class="title">
+                        <h5 class="text-center">Khám phá ẩm thực nước bạn.</h5>
+                        <p class="text-center">Đói ăn sushi? Làm thế nào ‘cơn Ý? Hãy thỏa mãn mọi cơn thèm khát bằng một
+                            vài
+                            cú nhấp chuột nhanh chóng và tận hưởng thế giới giao hàng tuyệt vời. Cho dù bạn đang ở nhà,
+                            delivery.com cho phép bạn kết nối với các nhà hàng địa phương yêu thích của mình và dễ dàng
+                            khám
+                            phá những nhà hàng mới.</p>
+                        <h5 class="text-center mt-3 mb-2">Món ăn phổ biến</h5>
+                    </div>
+                    <div class="cate-food-item">
+                        <div class="item">
+                            <img src="../images/homepage/Pizza_image_tablet_364x200.jpg" alt="" width="100%">
+                            <span>Pizza</span>
+                            <div class="cate-food-icon">
+                                <a href="../products/foods.html" title="Khám phá"><i class="fa fa-search-plus"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../images/homepage/Mexican_image_tablet_364x200.jpg" alt="" width="100%">
+                            <span>Món Mexico</span>
+                            <div class="cate-food-icon">
+                                <a href="../products/foods.html" title="Khám phá"><i class="fa fa-search-plus"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../images/homepage/Thai_image_tablet_364x200.jpg" alt="" width="100%">
+                            <span>Món Thái</span>
+                            <div class="cate-food-icon">
+                                <a href="../products/foods.html" title="Khám phá"><i class="fa fa-search-plus"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../images/homepage/Sushi_image_tablet_364x200.jpg" alt="" width="100%">
+                            <span>Món Nhật</span>
+                            <div class="cate-food-icon">
+                                <a href="../products/foods.html" title="Khám phá"><i class="fa fa-search-plus"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../images/homepage/Chinese_image_tablet_364x200.jpg" alt="" width="100%">
+                            <span>Món Trung</span>
+                            <div class="cate-food-icon">
+                                <a href="../products/foods.html" title="Khám phá"><i class="fa fa-search-plus"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="../images/homepage/American_image_tablet_364x200.jpg" alt="" width="100%">
+                            <span>Đồ ăn nhanh</span>
+                            <div class="cate-food-icon">
+                                <a href="../products/foods.html" title="Khám phá"><i class="fa fa-search-plus"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end category food-->
+            </div>
+            <!-- end -slider -->
+            <div class="container">
+                <div class="new-product">
+                    <h5>KHÁM PHÁ MÓN MỚI</h5>
+                    <div class=" new-product-item container">
+
+                        <div class="item  text-center bg-white pl-0 pr-0 pb-3" style="border-radius:20px;">
+                            <a href="#">
+                                <img src="../images/products/3-rau-551-xo-viet-nghe-tinh-quan-binh-thanh-ho-chi-minh-1584527339971762098-eatery-avatar-1585034719 (1).jpeg"
+                                    alt="" width="100%">
+                            </a>
+                            <h6 class="pt-3">Pizza thập cẩm</h6>
+                            <div class="price pb-3">100.000 đ</div>
+                            <a href="#cart">
+                                <button class="btn-buy">Chọn mua</button>
+                            </a>
+                        </div>
+                        <div class="item  text-center bg-white pl-0 pr-0 pb-3" style="border-radius:20px;">
+                           <a href="#">
+                                <img src="../images/products/3-rau-551-xo-viet-nghe-tinh-quan-binh-thanh-ho-chi-minh-1584527339971762098-eatery-avatar-1585034719 (1).jpeg"
+                                alt="" width="100%">
+                           </a>
+                            <h6 class="pt-3">Pizza thập cẩm</h6>
+                            <div class="price pb-3">100.000 đ</div>
+                            <a href="#cart">
+                                <button class="btn-buy">Chọn mua</button>
+                            </a>
+                        </div>
+                        <div class="item  text-center bg-white pl-0 pr-0 pb-3" style="border-radius:20px;">
+                            <a href="">
+                                <img src="../images/products/3-rau-551-xo-viet-nghe-tinh-quan-binh-thanh-ho-chi-minh-1584527339971762098-eatery-avatar-1585034719 (1).jpeg"
+                                alt="" width="100%">
+                            </a>
+                            <h6 class="pt-3">Pizza thập cẩm</h6>
+                            <div class="price pb-3">100.000 đ</div>
+                            <a href="#cart">
+                                <button class="btn-buy">Chọn mua</button>
+                            </a>
+                        </div>
+                        <div class="item  text-center bg-white pl-0 pr-0 pb-3" style="border-radius:20px;">
+                           <a href="">
+                            <img src="../images/products/3-rau-551-xo-viet-nghe-tinh-quan-binh-thanh-ho-chi-minh-1584527339971762098-eatery-avatar-1585034719 (1).jpeg"
+                            alt="" width="100%">
+                           </a>
+                            <h6 class="pt-3">Pizza thập cẩm</h6>
+                            <div class="price pb-3">100.000 đ</div>
+                            <a href="#cart">
+                                <button class="btn-buy">Chọn mua</button>
+                            </a>
+                        </div>
+                        <div class="item  text-center bg-white pl-0 pr-0 pb-3" style="border-radius:20px;">
+                           <a href="">
+                            <img src="../images/products/3-rau-551-xo-viet-nghe-tinh-quan-binh-thanh-ho-chi-minh-1584527339971762098-eatery-avatar-1585034719 (1).jpeg"
+                            alt="" width="100%">
+                           </a>
+                            <h6 class="pt-3">Pizza thập cẩm</h6>
+                            <div class="price pb-3">100.000 đ</div>
+                            <a href="#cart">
+                                <button class="btn-buy">Chọn mua</button>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="see-more_new-product text-center mb-4">
+                        <a href="./foods.html" class="text-dark">Xem thêm<i class="fa fa-chevron-right pl-1"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <!-- end new-products -->
+            </div>
+            <div class="container">
+                <div class="new-product">
+                    <h5>ĐỒ UỐNG GIẢI KHÁT</h5>
+                    <div class=" new-product-item container">
+
+                        <div class="item  text-center bg-white pl-0 pr-0 pb-3" style="border-radius:20px;">
+                            <a href="#">
+                                <img src="../images/products/circle-k-sg0163-50-nhat-chi-mai-quan-tan-binh-ho-chi-minh-1612195141940408291-tra-chanh-ly-lon-232534-1627149597.jpeg"
+                                    alt="" width="100%">
+                            </a>
+                            <h6 class="pt-3">Pizza thập cẩm</h6>
+                            <div class="price pb-3">100.000 đ</div>
+                            <a href="#cart">
+                                <button class="btn-buy">Chọn mua</button>
+                            </a>
+                        </div>
+                        <div class="item  text-center bg-white pl-0 pr-0 pb-3" style="border-radius:20px;">
+                            <a href="#">
+                                <img src="../images/products/circle-k-sg0163-50-nhat-chi-mai-quan-tan-binh-ho-chi-minh-1612195141940408291-tra-chanh-ly-lon-232534-1627149597.jpeg"
+                                    alt="" width="100%">
+                            </a>
+                            <h6 class="pt-3">Pizza thập cẩm</h6>
+                            <div class="price pb-3">100.000 đ</div>
+                            <a href="#cart">
+                                <button class="btn-buy">Chọn mua</button>
+                            </a>
+                        </div>
+                        <div class="item  text-center bg-white pl-0 pr-0 pb-3" style="border-radius:20px;">
+                            <a href="#">
+                                <img src="../images/products/circle-k-sg0163-50-nhat-chi-mai-quan-tan-binh-ho-chi-minh-1612195141940408291-tra-chanh-ly-lon-232534-1627149597.jpeg"
+                                    alt="" width="100%">
+                            </a>
+                            <h6 class="pt-3">Pizza thập cẩm</h6>
+                            <div class="price pb-3">100.000 đ</div>
+                            <a href="#cart">
+                                <button class="btn-buy">Chọn mua</button>
+                            </a>
+                        </div>
+                        <div class="item  text-center bg-white pl-0 pr-0 pb-3" style="border-radius:20px;">
+                            <a href="#">
+                                <img src="../images/products/circle-k-sg0163-50-nhat-chi-mai-quan-tan-binh-ho-chi-minh-1612195141940408291-tra-chanh-ly-lon-232534-1627149597.jpeg"
+                                    alt="" width="100%">
+                            </a>
+                            <h6 class="pt-3">Pizza thập cẩm</h6>
+                            <div class="price pb-3">100.000 đ</div>
+                            <a href="#cart">
+                                <button class="btn-buy">Chọn mua</button>
+                            </a>
+                        </div>
+                        <div class="item  text-center bg-white pl-0 pr-0 pb-3" style="border-radius:20px;">
+                            <a href="#">
+                                <img src="../images/products/circle-k-sg0163-50-nhat-chi-mai-quan-tan-binh-ho-chi-minh-1612195141940408291-tra-chanh-ly-lon-232534-1627149597.jpeg"
+                                    alt="" width="100%">
+                            </a>
+                            <h6 class="pt-3">Pizza thập cẩm</h6>
+                            <div class="price pb-3">100.000 đ</div>
+                            <a href="#cart">
+                                <button class="btn-buy">Chọn mua</button>
+                            </a>
+                        </div>
+                        
+
+                    </div>
+                    <div class="see-more_new-product text-center mb-4">
+                        <a href="./foods.html" class="text-dark">Xem thêm<i class="fa fa-chevron-right pl-1"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <!-- end new-products -->
+            </div>
+        <div class="back-to-top" title="Lên đầu trang"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+
+        </main>
+        <!-- end main -->
+        <footer class="text-light">
+            <div class="container pt-2 pb-5">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                        <h4>
+                            <dl>Về chúng tôi</dl>
+                        </h4>
+                        <br>
+                        <div class="mb-3 text-col-footer">Xa xa, đằng sau những ngọn núi chữ, xa những quốc gia Vokalia
+                            và Consonantia, có những văn tự mù mịt.</div>
+                        <ul style="display: flex;" class="parent-icon-footer">
+                            <a href="https://www.facebook.com/">
+                                <li class="icon-footer">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </li>
+                            </a>
+                            <a href="">
+                                <li class="icon-footer">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </li>
+                            </a>
+                            <a href="#">
+                                <li class="icon-footer" id="fb"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                        <h4>
+                            <dl>Giờ mở cửa</dl>
+                        </h4>
+                        <br>
+                        <div class="row text-col-footer">
+                            <div class="col-md-6">
+                                <li>Thứ hai</li>
+                                <li>Thứ ba</li>
+                                <li>Thứ tư</li>
+                                <li>Thứ năm</li>
+                                <li>Thứ sáu</li>
+                                <li>Thứ bảy</li>
+                                <li>Chủ nhật</li>
+
+                            </div>
+                            <div class="col-md-6">
+                                <li> 9:00 - 24:00</li>
+                                <li> 9:00 - 24:00</li>
+                                <li> 9:00 - 24:00</li>
+                                <li> 9:00 - 24:00</li>
+                                <li> 9:00 - 24:00</li>
+                                <li> 9:00 - 24:00</li>
+                                <li> 9:00 - 24:00</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                        <h4>Địa chỉ</h4><br>
+                        <div class="footer-map mt-3">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8638558813827!2d105.74459841402839!3d21.038132792836187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYw!5e0!3m2!1svi!2s!4v1628739738820!5m2!1svi!2s"
+                                style="width: 100%;height: 160px;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3">
+                        <h4>
+                            <dl>Kết nối</dl>
+                        </h4>
+                        <br>
+                        <span>Tải về:</span>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#"><img src="../images/applestore_hover.png" alt="" width="100px"
+                                        height="38px"></a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#"><img src="../images/googleplay_hover.png" alt="" width="100px"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="row">
+                    <div class=" coppy-right col-md-12 text-center mt-5 mb-5">
+                        Bản quyền © 2021 Bảo lưu mọi quyền | coppyright Hoang Hiep
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- end footer -->
+    </div>
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/scroll.js"></script>
+    <script type="text/javascript" src="../js/modal_login.js"></script>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

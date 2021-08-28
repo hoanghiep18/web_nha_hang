@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link boostrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="../css/admin/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-main">
+            <div class="logo">
+                <h1>delecious</h1>
+            </div>
+            <div class="form-search" data-toggle="modal" data-target="#SearchModal">
+                <a href="#">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+            </div>
+            <!-- modal search -->
+            <div class="modal" role="dialog" id="SearchModal">
+                <div class="modal-dialog" style="z-index: 10;">
+                    <div class="modal-content">
+                        <div class="modal-header" style="border:none;padding-bottom:0;">
+                            <button type="button" class="close" data-dismiss="modal"
+                                style="outline:none;">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                            <h1 class="text-center logo-txt">delicious.com</h1>
+                            <h4 class="text-center">
+                                <dt>Tìm kiếm</dt>
+                            </h4>
+
+                            <form action="#search.php" method="GET" name="form-search">
+                                <div class="form-group-search">
+                                    <input type="search" name="search" placeholder="Tìm kiếm chức năng"
+                                        class="" required>
+                                    <button type="submit" class="btn btn-primary text-center" id="btn-login">Tìm
+                                        kiếm</button>
+                                </div>
+
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end modal search -->
+            <nav class="nav">
+                <a href="../index.html" class="text-secondary"><i class="fa fa-home pr-2" aria-hidden="true"></i>Trang chủ</a>
+            </nav>
+        </div>
+        <!--  -->
+        <div class="header-login-info">
+            <div class="info-admin pr-3">
+                <h6>Adminstrator</h6>
+                <span class="admin-name text-secondary">hiephoangtran</span>
+            </div>
+            <div class="avatar-admin">
+                <a href="#">
+                    <img src="../images/admin/avatar_admin.png" alt="" width="50px">
+
+                </a>
+                <div class="dropdown">
+                    <div class="class dropdown-toggle" data-toggle="dropdown"></div>
+                    <div class="dropdown-menu" >
+                      <a class="dropdown-item" href="#logout"><i class="fa fa-sign-out pr-2" aria-hidden="true"></i>Đăng xuất</a>
+                      <a class="dropdown-item" href="#"><i class="fa fa-sign-in pr-2" aria-hidden="true"></i>Đăng nhập bằng tài khoản khác</a>
+                    </div>
+                  </div>
+                  <!-- end logout -->
+            </div>
+
+        </div>
+        <!--  -->
+    </header>
+    <!-- end header -->
+    <main>
+
+    </main>
+    <!-- end main -->
+    <footer>
+
+    </footer>
+    <!-- end footer -->
+    <!-- jquery bt -->
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/scroll.js"></script>
+    <script type="text/javascript" src="../js/modal_login.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

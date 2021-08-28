@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&family=Style+Script&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 600;
+    margin-bottom:0;
+
+}
+header{
+    background: #fafafc;
+    display:flex;
+    justify-content: space-between;
+    padding: 3px 20px;
+    /* position: fixed;
+    top: 0;
+    left:0;
+    right:0; */
+    box-shadow: 1px 3px 11px -2px #ccc;
+    
+}
+.header-main{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo h1,.logo-txt{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Style Script', cursive;
+    color:#1f5ea9;
+    font-size: 30px;
+    font-weight: 600;
+    padding-right: 50px;
+
+}
+.logo-txt{
+    padding: 0;
+}
+.form-search{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #edecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group-search{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+.form-group-search input{
+    width: 80%;
+    height: 40px;
+    border:none;
+    border-bottom:2px solid rgba(204, 204, 204, 0.774);
+    padding: 0 30px;
+    outline: none;
+    margin-right: 20px;
+}
+/* end search */
+.header-login-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-login-info span,.header-main nav a{
+    font-size: 14px;
+}
+.avatar-admin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dropdown{
+    position: relative;
+
+}
+.dropdown-menu{
+    width: 200px;
+    position: absolute;
+   left: -200px;
+   box-shadow: 1px 3px 6px 1px #ccc;
+   
+}
+.dropdown-menu a{
+    
+    white-space: normal;
+}
+.dropdown-toggle{
+    width: 50px;
+    cursor: pointer;
+}
+
+/* =============responsive============ */
+@media (min-width:576px) {
+    #SearchModal>.modal-dialog{
+        max-width: 80%;
+        
+    }
+}
